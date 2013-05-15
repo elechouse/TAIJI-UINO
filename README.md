@@ -8,7 +8,7 @@
 
 ![elechoues-due2](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-2.jpg)
 
-[MORE](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) 
+[MORE](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214)  
 
 ## Details ##
 
