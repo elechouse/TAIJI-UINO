@@ -4,6 +4,8 @@
 
 [MORE INFORMATION](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) 
 
+![elechouse-due](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-5.jpg)
+
 ### Details ###
 
 ##### Hardware #####
