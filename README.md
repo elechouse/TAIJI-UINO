@@ -2,7 +2,11 @@
 
 [Taijiuino DUE](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) is an Arduino-like board derives from [Arduino DUE](http://arduino.cc/en/Main/ArduinoBoardDue), it is designed by [Elechouse](http://www.elechouse.com).
 
-![elechouse-due](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-5.jpg)
+![elechouse-due0](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-5.jpg)
+
+![elechouse-due1](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-3.jpg)
+
+![elechoues-due2](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-2.jpg)
 
 [MORE INFORMATION](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) 
 
