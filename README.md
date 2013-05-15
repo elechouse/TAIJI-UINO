@@ -2,9 +2,9 @@
 
 [Taijiuino DUE](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) is an Arduino-like board derives from [Arduino DUE](http://arduino.cc/en/Main/ArduinoBoardDue), it is designed by [Elechouse](http://www.elechouse.com).
 
-[MORE INFORMATION](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) 
-
 ![elechouse-due](http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-5.jpg)
+
+[MORE INFORMATION](http://www.elechouse.com/elechouse/index.php?main_page=product_info&cPath=72_73&products_id=2214) 
 
 ### Details ###
 
@@ -13,6 +13,11 @@ Schematic and Gerber files of Taiji-Uino board.
 
 ##### Software #####
 Sample code to demonstrate how to use Arduino DUE
+
+- **rtled** turn on *LEDRX* and turn off *LEDTX* for 0.5 second, then turn off *LEDRX* and turn on *LEDTX* for 0.5 second, repeatedly.
+- **taijidiagram** Demonstrate how to make **Native USB** as a serial port, this program controls all the GPIOs to turn on or turn off the LEDs which are connected to the GPIO, work together with TaijiDiagram, is used to test the TaijiUino Due, a bit more like this:
+![Taijidiag](./image/taijidiag1.jpg)
+
 
 ### Get files ###
 
