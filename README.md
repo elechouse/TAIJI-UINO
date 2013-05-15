@@ -16,7 +16,8 @@ Sample code to demonstrate how to use Arduino DUE
 
 - **rtled** turn on *LEDRX* and turn off *LEDTX* for 0.5 second, then turn off *LEDRX* and turn on *LEDTX* for 0.5 second, repeatedly.
 - **taijidiagram** Demonstrate how to make **Native USB** as a serial port, this program controls all the GPIOs to turn on or turn off the LEDs which are connected to the GPIO, work together with TaijiDiagram, is used to test the TaijiUino Due, a bit more like this:
-![Taijidiag](./image/taijidiag1.jpg)
+
+	![Taijidiag](./image/taijidiag1.jpg)
 
 
 ### Get files ###
