@@ -46,7 +46,8 @@ In `variant.cpp`, add description of the additional pins to the structure ` PinD
 In `variant.h`, define macros help to remember the index value.
 Access these pins use three ways(name, pin number, or alias):
 
-	Name				Pin Number				 Alias
+	For Taijiuino Due R2:
+	Pin Name				Pin Number			Alias
 	PB24					103					  TP0
 	PB23					104					  TP1
 	PB22					105					  TP2
@@ -54,6 +55,29 @@ Access these pins use three ways(name, pin number, or alias):
 	PC20					107					  TP4
 	PC10					108					  TP5
 	PC11					109					  TP6
+	---------------------------------------------------
+	ERXD1   				98					  TP7
+	ETXD1   				95					  TP8
+	ERXER   				99				      TP9
+	ERXDV  					96					  TP10
+	EMDC    				100					  TP11
+	ERXD0   				97					  TP12
+	EMDIO   				101					  TP13
+	ETXD0   				94					  TP14
+	ETXEN   				93					  TP15
+	EXINT   				102					  TP16
+	ETXCLK  				92					  TP17
+	CLKEN   				109					  TP6 
+	
+	For Taijiuino Due R3 (new):
+	Pin Name 				Pin Number			Alias
+	TP0						103					  PB23
+	TP1						104					  PB23
+	TP2						105					  PB22
+	TP3						106					  PC27
+	TP4						107					  PC20
+	TP5						108					  PC10
+	TP6						109					  PC11
 	---------------------------------------------------
 	ERXD1   				98					  TP7
 	ETXD1   				95					  TP8
