@@ -67,8 +67,8 @@ Access these pins use three ways(name, pin number, or alias):
 	EXINT   				102					  TP16
 	ETXCLK  				92					  TP17
 	CLKEN   				109					  TP6
-
-Details in `variant.cpp` and `variant.h`.
+See more in [pin map](./pin_mapping.html).  
+Details in `variant.cpp` and `variant.h`.  
 
 ### Example
 	void setup(void)
