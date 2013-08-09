@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="TAJIUINO : Hardware and software of TAIJIUINO DUE (Arduino DUE compitable board)" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>TAJIUINO</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/elechouse/TAIJI-UINO">View on GitHub</a>
+
+          <h1 id="project_title">TAJIUINO</h1>
+          <h2 id="project_tagline">Hardware and software of TAIJIUINO DUE (Arduino DUE compitable board)</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/elechouse/TAIJI-UINO/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/elechouse/TAIJI-UINO/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="tajiuino-due" class="anchor" href="#tajiuino-due"><span class="octicon octicon-link"></span></a>TAJIUINO DUE</h1>
+
+<p><a href="http://www.elechouse.com/elechouse/index.php?main_page=product_info&amp;cPath=72_73&amp;products_id=2214">Taijiuino DUE</a> is an Arduino-like board derives from <a href="http://arduino.cc/en/Main/ArduinoBoardDue">Arduino DUE</a>, it is designed by <a href="http://www.elechouse.com">Elechouse</a>.</p>
+
+<p><img src="http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-5.jpg" alt="elechouse-due0"></p>
+
+<p><img src="http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-3.jpg" alt="elechouse-due1"></p>
+
+<p><img src="http://www.elechouse.com/elechouse/images/product/TAIJIUINO%20DUE%20R2/Taijiuino%20R2-2.jpg" alt="elechoues-due2"></p>
+
+<p><a href="http://www.elechouse.com/elechouse/index.php?main_page=product_info&amp;cPath=72_73&amp;products_id=2214">MORE</a>  </p>
+
+<h2>
+<a name="details" class="anchor" href="#details"><span class="octicon octicon-link"></span></a>Details</h2>
+
+<h3>
+<a name="hardware" class="anchor" href="#hardware"><span class="octicon octicon-link"></span></a>Hardware</h3>
+
+<p><strong>Schematic</strong> and <strong>Gerber files</strong> of Taiji-Uino board.</p>
+
+<h3>
+<a name="software" class="anchor" href="#software"><span class="octicon octicon-link"></span></a>Software</h3>
+
+<p>Sample code to demonstrate how to use Arduino DUE</p>
+
+<ul>
+<li>
+<strong>rtled</strong> turn on <em>LEDRX</em> and turn off <em>LEDTX</em> for 0.5 second, then turn off <em>LEDRX</em> and turn on <em>LEDTX</em> for 0.5 second, repeatedly.</li>
+<li>
+<p><strong>taijidiagram</strong> Demonstrate how to make <strong>Native USB</strong> into a serial port, this program controls all the GPIOs to turn on or turn off the LEDs which are connected to the GPIO, work together with TaijiDiagram, is used to test the TaijiUino Due, a bit like this:</p>
+
+<p><img src="./image/taijidiag1.jpg" alt="Taijidiag"></p>
+</li>
+<li><p><strong>additional_pins</strong> shows how to use TaijiUino additional pins.</p></li>
+</ul><h2>
+<a name="additional-pins" class="anchor" href="#additional-pins"><span class="octicon octicon-link"></span></a>Additional Pins</h2>
+
+<p>As what you see, there are more pins on Taijiuino DUE board. On the backside some silkscreen is marked aside them.<br>
+Because Arduino IDE does not support these pins, so to use these pins, you need do some hack things to enable them. </p>
+
+<h3>
+<a name="patch-arduino-ide" class="anchor" href="#patch-arduino-ide"><span class="octicon octicon-link"></span></a>Patch Arduino IDE</h3>
+
+<ul>
+<li>Download the <strong>TAIJI-UINO</strong> repository.</li>
+<li>In <code>patch/additional-pins-patch</code> folder, find <code>variant.cpp</code> and <code>variant.h</code>
+</li>
+<li>Open your Arduino IDE folder, and open <code>$ARDUINO/hardware/arduino/sam/variants/arduino_due_x</code> ($ARDUINO stands for the position of your Arduino IDE).</li>
+<li>In the <code>arduino_due_x</code> folder you can see <code>variant.cpp</code> and <code>variant.h</code>, rename this two files to <code>variant.cpp.bak</code> and <code>variant.h.bak</code>, in case of you want go back to the origin IDE.</li>
+<li>Copy the <code>patch/additional-pins-patch/{variant.cpp, variant.h}</code> to <code>arduino_due_x</code> folder</li>
+<li>Open <code>software/additional_pins/additional_pins.ino</code>, upload it to your Taijiuino DUE, then test it.</li>
+</ul><h3>
+<a name="why-need-hack" class="anchor" href="#why-need-hack"><span class="octicon octicon-link"></span></a>Why need hack?</h3>
+
+<p>We aim at bringing you more pins, but origin Arduino IDE does not support it, so we just hack it.</p>
+
+<h3>
+<a name="what-change" class="anchor" href="#what-change"><span class="octicon octicon-link"></span></a>What change?</h3>
+
+<p>In <code>variant.cpp</code>, add description of the additional pins to the structure <code>PinDescription g_APinDescription[]</code>, number of these pins are from 92 to 109.<br>
+In <code>variant.h</code>, define macros help to remember the index value.
+Access these pins use three ways(name, pin number, or alias):</p>
+
+<pre><code>For Taijiuino Due R2:
+Pin Name                Pin Number          Alias
+PB24                    103                   TP0
+PB23                    104                   TP1
+PB22                    105                   TP2
+PB27                    106                   TP3
+PC20                    107                   TP4
+PC10                    108                   TP5
+PC11                    109                   TP6
+---------------------------------------------------
+ERXD1                   98                    TP7
+ETXD1                   95                    TP8
+ERXER                   99                    TP9
+ERXDV                   96                    TP10
+EMDC                    100                   TP11
+ERXD0                   97                    TP12
+EMDIO                   101                   TP13
+ETXD0                   94                    TP14
+ETXEN                   93                    TP15
+EXINT                   102                   TP16
+ETXCLK                  92                    TP17
+CLKEN                   109                   TP6 
+
+For Taijiuino Due R3 (new):
+Pin Name                Pin Number          Alias
+TP0                     103                   PB23
+TP1                     104                   PB23
+TP2                     105                   PB22
+TP3                     106                   PC27
+TP4                     107                   PC20
+TP5                     108                   PC10
+TP6                     109                   PC11
+---------------------------------------------------
+ERXD1                   98                    TP7
+ETXD1                   95                    TP8
+ERXER                   99                    TP9
+ERXDV                   96                    TP10
+EMDC                    100                   TP11
+ERXD0                   97                    TP12
+EMDIO                   101                   TP13
+ETXD0                   94                    TP14
+ETXEN                   93                    TP15
+EXINT                   102                   TP16
+ETXCLK                  92                    TP17
+CLKEN                   109                   TP6
+</code></pre>
+
+<p>See more in <a href="./pin_mapping.html">pin map</a>.<br>
+Details in <code>variant.cpp</code> and <code>variant.h</code>.  </p>
+
+<h3>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<pre><code>void setup(void)
+{
+    // All this three lines do the same thing
+    pinMode(PB23, OUTPUT);
+    pinMode(103, OUTPUT);
+    pinMode(TP0, OUTPUT);
+
+    // All this three lines do the same thing
+    digitalWrite(PB23, HIGH);
+    digitalWrite(103, HIGH);
+    digitalWrite(TP0, HIGH);
+}
+
+void loop(void)
+{
+    //do nothing
+}
+</code></pre>
+
+<h2>
+<a name="get-files" class="anchor" href="#get-files"><span class="octicon octicon-link"></span></a>Get files</h2>
+
+<pre><code># get through GIT tools
+git clone https://github.com/elechouse/TAIJI-UINO.git
+</code></pre>
+
+<p>or</p>
+
+<pre><code># download the zip file
+</code></pre>
+
+<h2>
+<a name="buy" class="anchor" href="#buy"><span class="octicon octicon-link"></span></a>Buy</h2>
+
+<p><a href="http://www.elechouse.com"><img src="https://raw.github.com/elechouse/CarDriverShield/master/image/elechouse.png" alt="elechouse"></a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">TAJIUINO maintained by <a href="https://github.com/elechouse">elechouse</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
